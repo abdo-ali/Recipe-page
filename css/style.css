@@ -21,6 +21,8 @@
     --Stone-600: hsl(30, 10%, 34%);
     --Stone-900: hsl(24, 5%, 18%);
     
+    --hsla-stone-600: hsla(30, 10%, 34%, .8);
+
     --Brown-800: hsl(14, 45%, 36%);
     
     --Rose-800: hsl(332, 51%, 32%);
@@ -54,6 +56,7 @@
 img{
   display: block;
   max-width: 100%;
+  box-sizing: border-box;
 }
 
 h1,
@@ -67,13 +70,20 @@ h1{
 }
 h2{
     color: var(--Brown-800);
+    padding: var(--main-padding) 0;
 }
 h3{
     color: var(--Rose-800);
     padding-bottom: calc(var(--main-padding) * .5) ;
 }
+ul{
+    padding-left: calc(var(--main-padding) * .75);
+
+}
+
 li{
     line-height: 1.6;
+    padding-left: calc(var(--main-padding) * .5);
 }
 li span{
     font-weight: var(--fw-bold);
@@ -83,7 +93,8 @@ body{
 }
 .container{
     padding: calc(var(--main-padding) * 1.5) var(--main-padding);
-    color: var(--Stone-600);
+    color: var(--hsla-stone-600);
+    font-weight: var(--fw-regular);
 }
 p{
     padding: var(--main-padding) 0;
@@ -97,4 +108,62 @@ p{
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+}
+hr{
+    margin-top: var(--main-padding);
+}
+.Ingredients{
+    list-style-type: square;
+}
+.Ingredients span{
+    font-weight: var(--fw-black);
+}
+.Nutrition-p{
+    padding-top: 0;
+}
+table{
+    width: 100%;
+}
+td{
+    border-bottom: 1px solid #ddd;
+    padding: calc(var(--main-padding) * .5);
+}
+.last-row{
+    border-bottom: none;
+    padding: calc(var(--main-padding) * .5) calc(var(--main-padding) * .5) 0;
+
+}
+.first-row{
+    padding-top: 0;
+}
+.col-2{
+    color: var(--Brown-800);
+    font-weight: var(--fw-black);
+}
+@media (min-width: 600px) {
+    body{
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: var(--Stone-100);
+    }
+    main{
+        width: 65%;
+        margin: 100px 0;
+        background-color: var(--White);
+        border-radius: 25px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+    }
+    img{
+        margin: 2rem auto 0;
+        width: 90%;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+}
 }
