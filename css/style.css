@@ -88,6 +88,14 @@ li{
 li span{
     font-weight: var(--fw-bold);
 }
+.Ingredients li::marker{
+    color: var(--Brown-800);
+
+}
+.preparetion-time li::marker{
+    color: var(--Rose-800);
+
+}
 body{
     font-family: var(--font-family-default-2);
 }
@@ -116,6 +124,10 @@ hr{
     list-style-type: square;
 }
 .Ingredients span{
+    font-weight: var(--fw-black);
+}
+ol li::marker{
+    color: var(--Brown-800);
     font-weight: var(--fw-black);
 }
 .Nutrition-p{
